@@ -4,24 +4,22 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css" rel="stylesheet"
-        id="bootstrap-css">
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css" rel="stylesheet">
     <link href="./style.css" type="text/css" rel="stylesheet" />
     <title>Chat App</title>
 </head>
 
 <body>
 
-    <div class="chat-window">
+    <nav class="navbar navbar-light bg-light justify-content-between">
+        <a class="navbar-brand">Chat App</a>
+        <form class="form-inline text-right">
+          <input class="form-control mr-sm-2" type="search" placeholder="input username" aria-label="Search">
+          <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Change</button>
+        </form>
+      </nav>
 
-        <div class="menu">
-            <div class="buttons">
-                <div class="button close"></div>
-                <div class="button minimize"></div>
-                <div class="button maximize"></div>
-            </div>
-            <div class="title">Chat App</div>
-        </div>
+    <div class="chat-window container">
 
         <ul id="messages">
         </ul>
@@ -34,15 +32,14 @@
                 <div class="message-wrapper">
                     <input id="message" placeholder="Type something..." />
                 </div>
-                <button class="submit">
+                <button class="message-submit btn">
                     Send
                 </button>
             </form>
         </div>
-
     </div>
 
-    <!-- <script src="/js/socket.js"></script> -->
+    <script src="/js/socket.js"></script>
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"
         integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/gh/rexeze/formatTimeStamp/src/index-cdn.js"></script>
