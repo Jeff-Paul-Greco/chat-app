@@ -4,8 +4,8 @@ var messages = document.getElementById("messages");
 (function () {
     $("form").submit(function (event) {
 
-        event.preventDefault(); 
         let li = document.createElement("li");
+        event.preventDefault(); 
         socket.emit("chat message", $("#message").val());
 
         messages.appendChild(li).append($("#message").val());
