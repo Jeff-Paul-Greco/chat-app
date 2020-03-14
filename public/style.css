@@ -2,6 +2,10 @@
     box-sizing: border-box;
 }
 
+body {
+    margin: 15px 15px;
+}
+
 .wrapper {
     display: inline-block;
     text-align: center;
@@ -14,14 +18,31 @@
 
 .message-wrapper {
     float: left;
-    
+
 }
 
-.messages {
+#messages {
     position: relative;
     list-style: none;
-    padding: 20px 10px 0 10px;
+    padding: 20px 0px 0px 0px;
     margin: 0;
     height: 347px;
     overflow: scroll;
+}
+
+#messages > li {
+    padding-top: 15px;
+}
+
+#typing {
+    text-emphasis: italic;
+}
+
+#messages > span {
+    font-size: 12px;
+    font-style: italic;
   }
+
+.chat-window {
+    min-height: 100%;
+}
