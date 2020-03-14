@@ -4,8 +4,14 @@ var messages = document.getElementById("messages");
 (function () {
     $("#form").submit(function (event) {
 
-        let li = document.createElement("li");
         event.preventDefault(); 
+        if ($("#message").val() === "") {
+            alert("please type something into the field");
+            return;
+        } else {
+
+        let li = document.createElement("li");
+        
         socket.emit("chat message", $("#message").val());
 
         messages.appendChild(li).append($("#message").val());
@@ -15,6 +21,7 @@ var messages = document.getElementById("messages");
         $("#message").val("");
 
         return false;
+        }
     });
 
     socket.on("received", data => {
