@@ -2,7 +2,7 @@ var socket = io();
 var messages = document.getElementById("messages");
 
 (function () {
-    $("form").submit(function (event) {
+    $("#form").submit(function (event) {
 
         let li = document.createElement("li");
         event.preventDefault(); 
