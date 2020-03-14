@@ -7,6 +7,7 @@ const http = require("http").Server(app);
 const io = require("socket.io");
 const Chat = require("./models/Chat");
 const chatRouter = require("./routes/chat");
+const loginRouter = require("./routes/login");
 
 const PORT = process.env.PORT || 3000;
 
@@ -15,6 +16,7 @@ app.use(bodyParser.json());
 
 // routes
 app.use("/chats", chatRouter);
+app.use("/login", loginRouter);
 
 // set app to static 
 app.use(express.static(__dirname + "/public"));

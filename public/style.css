@@ -26,7 +26,7 @@ body {
     list-style: none;
     padding: 20px 0px 0px 0px;
     margin: 0;
-    height: 347px;
+    height: 60vh;
     overflow: scroll;
 }
 
@@ -41,8 +41,4 @@ body {
 #messages > span {
     font-size: 12px;
     font-style: italic;
-  }
-
-.chat-window {
-    min-height: 100%;
 }
