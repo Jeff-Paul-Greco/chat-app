@@ -23,7 +23,7 @@ app.use(express.static(__dirname + "/public"));
 socket = io(http);
 
 // connecting to DB
-const connect = require("./dbconnect");
+const connect = require("./dbconnection");
 
 // User connected msg
 socket.on("connection", socket => {
