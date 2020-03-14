@@ -1,11 +1,47 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css" rel="stylesheet"
+        id="bootstrap-css">
+    <link href="./style.css" type="text/css" rel="stylesheet" />
     <title>Chat App</title>
 </head>
+
 <body>
-    
+
+    <div class="chat-window">
+
+        <div class="menu">
+            <div class="buttons">
+                <div class="button close"></div>
+                <div class="button minimize"></div>
+                <div class="button maximize"></div>
+            </div>
+            <div class="title">Chat App</div>
+        </div>
+
+        <ul id="messages">
+        </ul>
+
+        <div class="wrapper clearfix">
+
+            <div id="typing"></div>
+            
+            <form id="message-form">
+                <div class="message-wrapper">
+                    <input id="message-input" placeholder="Type something..." />
+                </div>
+                <button class="submit">
+                    Send
+                </button>
+            </form>
+        </div>
+
+    </div>
+
 </body>
+
 </html>

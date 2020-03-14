@@ -10,18 +10,20 @@ const Chat = require("./models/Chat");
 
 const PORT = process.env.PORT || 3000;
 
+// connect to DB
 mongoose.Promise = require("bluebird");
-mongoose.connect("mongodb://localhost/chat", { useNewUrlParser: true });
+const MONGODB_URI = process.env.MONGODB_URI || "mongodb://localhost/chat";
+mongoose.connect(MONGODB_URI, { useNewUrlParser: true });
 
-//bodyparser middleware
+// configure bodyparser middleware
 app.use(bodyParser.json());
 
-//set the express.static middleware
+// set app to static 
 app.use(express.static(__dirname + "/public"));
 
-//integrating socketio
+// integrating socketio
 socket = io(http);
 
 http.listen(PORT, () => {
-  console.log("Server listening on Port: " + PORT);
+    console.log("Server listening on Port: " + PORT);
 });
