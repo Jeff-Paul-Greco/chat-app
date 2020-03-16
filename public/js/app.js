@@ -20,6 +20,8 @@ var messages = document.getElementById("messages");
 
             $("#message").val("");
 
+            $("#messages")[0].scrollTop =  $("#messages")[0].scrollHeight
+
             return false;
         }
     });
@@ -30,6 +32,7 @@ var messages = document.getElementById("messages");
         var messages = document.getElementById("messages");
         messages.appendChild(li).append(data.message);
         messages.appendChild(span).append("by " + "anonymous" + ": " + "just now");
+        $("#messages")[0].scrollTop =  $("#messages")[0].scrollHeight
     });
 })();
 
@@ -47,8 +50,10 @@ var messages = document.getElementById("messages");
                 messages
                     .appendChild(span)
                     .append("by " + data.sender + ": " + formatTimeAgo(data.createdAt));
+                    $("#messages")[0].scrollTop =  $("#messages")[0].scrollHeight
             });
         });
+        
 })();
 
 let messageInput = document.getElementById("message");
