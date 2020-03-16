@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Baloo+Thambi+2&display=swap" rel="stylesheet">
     <link href="./style.css" type="text/css" rel="stylesheet" />
     <title>Real-Time Chat App</title>
 </head>
@@ -12,11 +13,11 @@
 <body>
 
     <nav class="navbar navbar-light bg-light justify-content-between">
-        <a class="navbar-brand">Real-Time Chat App</a>
+        <a class="navbar-brand" href="/">Real-Time Chat App</a>
         <form method="post" action="/login" class="form-inline text-right">
             <input class="form-control mr-sm-2" name="username" type="search" placeholder="change username"
                 aria-label="Search">
-            <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Change</button>
+            <button class="btn btn-md change-button" type="submit">Change</button>
         </form>
     </nav>
 
@@ -34,7 +35,7 @@
 
             <form id="form">
                 <div class="message-wrapper">
-                    <input id="message" placeholder="Type something..." />
+                    <input id="message" placeholder="type something..." />
                 </div>
                 <button class="message-submit btn btn-md">
                     Send

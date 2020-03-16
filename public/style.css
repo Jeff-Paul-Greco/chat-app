@@ -3,11 +3,46 @@
 }
 
 body {
+    
+    background-color: rgb(51, 51, 51);
     margin: 15px 15px;
 }
 
-ul > li {
+li {
+    color: white;
+    font-family: 'Baloo Thambi 2', cursive;
+    font-size: 24px;
+    padding-left: 7px;
+    border-radius: 10px;
+    margin-top: 10px;
+}
+
+li:nth-child(3n) {
     background-color: rgb(0, 187, 0)
+}
+
+li:nth-child(3n + 1) {
+    background-color: rgb(63, 63, 228)
+}
+
+li:nth-child(3n + 2) {
+    background-color: rgb(171, 0, 187)
+}
+
+/* #messages > span:nth-child(3n) {
+    background-color: rgb(0, 187, 0)
+}
+
+#messages > span:nth-child(3n + 1) {
+    background-color: rgb(63, 63, 228)
+}
+
+#messages > span:nth-child(3n + 2) {
+    background-color: rgb(171, 0, 187)
+} */
+
+.change-button {
+    margin-top: 10px;
 }
 
 .wrapper {
@@ -25,20 +60,28 @@ ul > li {
 
 .message-wrapper {
     float: left;
-
 }
 
 #messages {
     position: relative;
     list-style: none;
-    padding: 20px 0px 0px 0px;
-    margin: 0;
+    padding: 10px;
+    border-radius: 10px;
     height: 75vh;
     overflow: scroll;
+    background-image: url("./images/background.png");
 }
 
-#messages > li {
-    padding-top: 15px;
+/* .form-control {
+    margin-top: 10px;
+} */
+
+.navbar-brand {
+    padding: 15px 0px 0px 0px;
+    font-size: 38px;
+    font-family: 'Baloo Thambi 2', cursive;
+    font-weight: bolder;
+    color: rgb(201, 201, 201);
 }
 
 #typing {
@@ -46,11 +89,17 @@ ul > li {
 }
 
 #messages > span {
-    font-size: 12px;
+    font-size: 14px;
     font-style: italic;
 }
 
 #message {
     width: 210%;
     line-height: 28px;
+    padding-left: 20px;
+}
+
+.message-submit:hover, .change-button:hover {
+    background-color: rgb(236, 0, 236);
+    color: white;
 }

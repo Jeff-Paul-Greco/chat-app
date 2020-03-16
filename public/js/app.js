@@ -4,23 +4,23 @@ var messages = document.getElementById("messages");
 (function () {
     $("#form").submit(function (event) {
 
-        event.preventDefault(); 
+        event.preventDefault();
         if ($("#message").val() === "") {
             alert("please type something into the field");
             return;
         } else {
 
-        let li = document.createElement("li");
-        
-        socket.emit("chat message", $("#message").val());
+            let li = document.createElement("li");
 
-        messages.appendChild(li).append($("#message").val());
-        let span = document.createElement("span");
-        messages.appendChild(span).append("by " + "Anonymous" + ": " + "just now");
+            socket.emit("chat message", $("#message").val());
 
-        $("#message").val("");
+            messages.appendChild(li).append($("#message").val());
+            let span = document.createElement("span");
+            messages.appendChild(span).append("by " + "Anonymous" + ": " + "just now");
 
-        return false;
+            $("#message").val("");
+
+            return false;
         }
     });
 
