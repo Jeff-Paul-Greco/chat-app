@@ -14,6 +14,8 @@ const PORT = process.env.PORT || 3000;
 // configure bodyparser middleware
 app.use(bodyParser.json());
 
+app.use(express.urlencoded({ extended: false }))
+
 // routes
 app.use("/chats", chatRouter);
 app.use("/login", loginRouter);
@@ -57,7 +59,7 @@ socket.on("connection", socket => {
         // Save chat to DB
         connect.then(db => {
             console.log("connected to the server");
-            let chatMessage = new Chat({ message: msg, sender: "Anonymous" });
+            let chatMessage = new Chat({ message: msg, sender: localStorage.getItem("user") || "Anonymous" });
 
             chatMessage.save();
         });
