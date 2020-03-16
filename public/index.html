@@ -15,7 +15,7 @@
     <nav class="navbar navbar-light bg-light justify-content-between">
         <a class="navbar-brand" href="/">Real-Time Chat App</a>
         <form method="post" action="/login" class="form-inline text-right">
-            <input class="form-control mr-sm-2" name="username" type="search" placeholder="change username"
+            <input class="form-control mr-sm-2" id="name-input" name="username" type="search" placeholder="change username"
                 aria-label="Search">
             <button class="btn btn-md change-button" type="submit">Change</button>
         </form>
@@ -35,7 +35,7 @@
 
             <form id="form">
                 <div class="message-wrapper">
-                    <input id="message" placeholder="type something..." />
+                    <input id="message" class="form-control" placeholder="type something..." />
                 </div>
                 <button class="message-submit btn btn-md">
                     Send
