@@ -59,7 +59,16 @@ socket.on("connection", socket => {
         // Save chat to DB
         connect.then(db => {
             console.log("connected to the server");
-            let chatMessage = new Chat({ message: msg, sender: localStorage.getItem("user") || "Anonymous" });
+
+            let userCheck = "";
+            userCheck = localStorage.getItem("user")
+            let user = "Annonymous"
+            if (userCheck) {
+                user = userCheck
+            } 
+            
+
+            let chatMessage = new Chat({ message: msg, sender : user });
 
             chatMessage.save();
         });
