@@ -82,5 +82,5 @@ $("#name-change").submit(function (event) {
 
     event.preventDefault(); 
     let username = localStorage.setItem("user", $("#name-input").val())
-    $("#name-input").val("");
+    $("#name-input").val("")
 });

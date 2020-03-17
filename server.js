@@ -7,7 +7,6 @@ const http = require("http").Server(app);
 const io = require("socket.io");
 const Chat = require("./models/Chat");
 const chatRouter = require("./routes/chat");
-const loginRouter = require("./routes/login");
 
 const PORT = process.env.PORT || 3000;
 
@@ -18,7 +17,6 @@ app.use(express.urlencoded({ extended: false }))
 
 // routes
 app.use("/chats", chatRouter);
-app.use("/login", loginRouter);
 
 // set app to static 
 app.use(express.static(__dirname + "/public"));
@@ -60,13 +58,7 @@ socket.on("connection", socket => {
         connect.then(db => {
             console.log("connected to the server");
 
-            let userCheck = "";
-            userCheck = localStorage.getItem("user")
-            let user = "Annonymous"
-            if (userCheck) {
-                user = userCheck
-            } 
-            
+            let user = "Dude"
 
             let chatMessage = new Chat({ message: msg, sender : user });
 
