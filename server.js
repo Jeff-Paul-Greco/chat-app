@@ -58,7 +58,7 @@ socket.on("connection", socket => {
         connect.then(db => {
             console.log("connected to the server");
 
-            let user = "Dude"
+            let user = "Anonymous";
 
             let chatMessage = new Chat({ message: msg, sender : user });
 
